@@ -1,5 +1,61 @@
-<!--
-    Replace this with your working code from Lab 2, and include:
-    - The styles in this folder's `style.css`
-    - The script in script.js, which should be included via a `<script src="script.js" >` call before your closing </body> tag 
--->
+
+<html lang="en">
+
+<head>
+    <style class="css"></style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yasmine's Labs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Yasmine Torres' Labs for INST377</h1>
+        </header>
+        <div class="container">
+            <div class="left_section box">
+                <h2>Album Names</h2>
+                <div class="box">
+                    <ol>
+                        <li>Quevedo - Donde Quiero Estar</li>
+                        <li>Drake - Her Loss</li>
+                        <li>Future - I Never Liked You</li>
+                        <li>Mora - Paraiso</li>
+                        <li>Rauw Alejandro - Saturno</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="right_section box">
+                <h2>Image Carousel</h2>
+                    <div class="carousel">
+                        <button class="prev"> prev </button>
+                        <div class="slides">
+                            <div class="carousel_item visible"><img id = "slide_1" src=images/beach1.png></div>
+                            <div class="carousel_item hidden"><img id = "slide_2" src="images/dc1.png" /></div>
+                            <div class="carousel_item hidden"><img id = "slide_3" src="images/snow1.png" /></div>
+                            <div class="carousel_item hidden"><img id = "slide_4" src="images/sunset1.png" /></div>
+                        </div>
+                        <button class="next"> next </button>
+                    </div>
+                    <div class="box">
+                        <p>
+                            Above are four images of a caricature of Japanese Rice Cake. They are
+                            all smiling, with the first one jumping, the second one inside a
+                            bubble, the third one standing still and the final one smaller than
+                            the rest.
+                        </p>
+                    </div>
+            </div>
+        </div>
+        <footer class="footer">
+            My account name is ytorres1.
+            <a href="http://github.com/ytorres1" target="_blank" rel="noopener noreferrer">
+                Here is the link to my GitHub account!</a>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
