@@ -30,7 +30,6 @@ function updateSlidePosition() {
 
   // outside your .forEach,
   // add a 'visible' class to the slide at the current slidePosition in slides
-  console.log(slidePosition)
   slides[slidePosition].classList.add("visible");
 };
 
@@ -62,7 +61,7 @@ function moveToPrevSlide() {
  if(slidePosition === 0){
   slidePosition = totalSlides - 1;
  } else {
-  slidePosition = slidePosition - 1;
+  slidePosition -= 1;
  }
   updateSlidePosition();
 }
@@ -75,6 +74,12 @@ document.querySelector('.next') // Get the appropriate element (<button class="n
   .addEventListener('click', () => { // set an event listener on it - when it's clicked, do this callback function
     console.log('clicked next'); // let's tell the client console we made it to this point in the script
     moveToNextSlide(); // call the function above to handle this
+  });
+
+  document.querySelector('.prev') // Get the appropriate element (<button class="next">)
+  .addEventListener('click', () => { // set an event listener on it - when it's clicked, do this callback function
+    console.log('clicked prev'); // let's tell the client console we made it to this point in the script
+    moveToPrevSlide(); // call the function above to handle this
   });
 
 // Paying close attention to the above queryselector, write one that fires
