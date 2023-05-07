@@ -9,7 +9,7 @@ function getRandomIntInclusive(min, max) {
     const target = document.querySelector("#restaurant_list");
     target.innerHTML = "";
     list.forEach((item) => {
-      const str = `<li>${item.name}</li>`;
+      const str = `<li>${item.petname}</li>`;
       target.innerHTML += str;
     });
   }
@@ -17,7 +17,7 @@ function getRandomIntInclusive(min, max) {
   /* A quick filter that will return something based on a matching input */
   function filterList(list, query) {
     return list.filter((item) => {
-      const lowerCaseName = item.name.toLowerCase();
+      const lowerCaseName = item.petname.toLowerCase();
       const lowerCaseQuery = query.toLowerCase();
       return lowerCaseName.includes(lowerCaseQuery); // return a list that is filtered by comparing the item name in lower case to the query in lower case
     });
@@ -107,10 +107,10 @@ function getRandomIntInclusive(min, max) {
   
   function shapeDataForLineChart(array) {
     return array.reduce((collection, item) => {
-      if(!collection[item.category]) {
-        collection[item.category] = [item]
+      if(!collection[item.animaltype]) {
+        collection[item.animaltype] = [item]
       } else {
-        collection[item.category].push(item);
+        collection[item.animaltype].push(item);
       }
       return collection;
     }, {});
@@ -118,10 +118,10 @@ function getRandomIntInclusive(min, max) {
   }
 
   async function getData() {
-    const url = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
+    const url = 'https://data.montgomerycountymd.gov/resource/e54u-qx42.json';
     const data = await fetch(url);
     const json = await data.json();
-    const reply = json.filter((item) => Boolean(item.geocoded_column1)).filter((item) => Boolean(item.name));
+    const reply = json.filter((item) => Boolean(item.animalid)).filter((item) => Boolean(item.petname));
     return reply;
 
   }
@@ -165,7 +165,7 @@ function getRandomIntInclusive(min, max) {
       loadAnimation.style.display = "inline-block";
   
       const results = await fetch(
-        "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json"
+        "https://data.montgomerycountymd.gov/resource/e54u-qx42.json"
       );
   
       const storedList = await results.json();
