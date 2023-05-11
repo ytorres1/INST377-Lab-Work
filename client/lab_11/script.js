@@ -17,14 +17,13 @@ form.addEventListener('submit', (event) => {
             data.forEach((adoption) => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${adoption.animalname}</td>
+                    <td>${adoption.petname}</td>
                     <td>${adoption.animaltype}</td>
                     <td>${adoption.breed}</td>
                     <td>${adoption.color}</td>
                     <td>${adoption.sex}</td>
-                    <td>${adoption.age}</td>
-                    <td>${adoption.location}</td>
-                    <td>${adoption.intake_date}</td>
+                    <td>${adoption.petage}</td>
+                    <td>${adoption.indate}</td>
                 `;
                 adoptionsTable.appendChild(row);
             });
