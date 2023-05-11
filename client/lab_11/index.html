@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Montgomery County Pet Adoptions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Montgomery County Pet Adoptions</h1>
+        <form>
+            <label for="type">Type:</label>
+            <select id="type">
+                <option value="">All</option>
+                <option value="Dog">Dogs</option>
+                <option value="Cat">Cats</option>
+                <option value="Other">Other</option>
+            </select>
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date">
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date">
+            <button id="filter-btn">Filter</button>
+        </form>
+    </header>
+    <main>
+        <table id="adoptions-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Breed</th>
+                    <th>Color</th>
+                    <th>Sex</th>
+                    <th>Age</th>
+                    <th>Location</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
